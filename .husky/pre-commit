@@ -12,4 +12,3 @@ if git diff --staged --quiet; then
 fi
 
 exit 0
-
