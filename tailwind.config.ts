@@ -5,6 +5,10 @@ const config: Config = {
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      spacing: {
+        fluid: 'clamp(1rem, 2vw + 1rem, 3rem)',
+        '16.5': '60px',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
