@@ -1,19 +1,34 @@
 import { PropsWithChildren } from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui'
+import Link from 'next/link'
+import { Avatar } from '@/components'
+import { mainMenu } from '@/constants'
 import { AnimatedWrapper } from '@/shared/motion'
 
 const SideRail = ({ children }: PropsWithChildren) => (
   <div className="flex h-screen w-full overflow-hidden">
-    <div className="border-r p-4">
-      <AnimatedWrapper className="cursor-pointer">
-        <Avatar className="size-16.5 border-4 border-primary/30">
-          <AvatarImage src="/logo.jpg" alt="logo" />
-          <AvatarFallback>W</AvatarFallback>
-        </Avatar>
-      </AnimatedWrapper>
+    <div className="flex flex-col items-center justify-between border-r p-4">
+      <Avatar />
+
+      <nav>
+        <ul className="flex flex-col gap-5">
+          {mainMenu.map(({ title, icon: Icon, link }) => (
+            <li key={title}>
+              <AnimatedWrapper>
+                <Link href={link}>
+                  <Icon />
+                </Link>
+              </AnimatedWrapper>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div />
     </div>
+
     <div>{children}</div>
-    SideRail
+
+    <div className="flex h-screen items-center justify-center" />
   </div>
 )
 
