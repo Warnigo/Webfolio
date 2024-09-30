@@ -10,4 +10,10 @@ export default {
     goTop: 'Go Top',
     itsMe: "It's me 😉",
   },
+  social: {
+    github: 'Github',
+    x: 'X',
+    linkedin: 'Linkedin',
+    dev: 'Dev.to',
+  },
 } as const

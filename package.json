@@ -34,7 +34,8 @@
     "analyze:build": "ANALYZE=true next build",
     "json:server": "pnpm dlx json-server --watch db.json --port 5001",
     "sort:packages": "node scripts/sort-packages.mjs",
-    "check:packages": "node scripts/check-package-versions.mjs"
+    "check:packages": "node scripts/check-package-versions.mjs",
+    "check:env": "node scripts/check-env.mjs"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

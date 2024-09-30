@@ -29,19 +29,20 @@ export const SideLeft = () => {
           <TooltipContent
             side="bottom"
             align="center"
-            className="mt-3 rounded-xl border bg-background font-grotesk text-sm text-primary"
+            className="rounded-xl border bg-background font-grotesk text-sm text-primary"
           >
             <p>{t('itsMe')}</p>
           </TooltipContent>
         </Tooltip>
+
         <nav>
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-4">
             {mainMenu.map(({ title, icon: Icon, link }) => (
               <li key={title}>
-                <AnimatedWrapper className="relative">
+                <AnimatedWrapper>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="ghost" size="icon" asChild className="rounded-xl">
+                      <Button variant="outline" size="icon" asChild className="rounded-xl p-5">
                         <Link href={link}>
                           <Icon className="size-7 shrink-0 text-primary/80 hover:text-primary" />
                         </Link>
@@ -50,7 +51,7 @@ export const SideLeft = () => {
                     <TooltipContent
                       side="right"
                       align="center"
-                      className="ml-3 rounded-xl border bg-background font-grotesk text-sm text-primary"
+                      className="rounded-xl border bg-background font-grotesk text-sm text-primary"
                     >
                       <p>{t(title as any)}</p>
                     </TooltipContent>
@@ -64,15 +65,20 @@ export const SideLeft = () => {
         <AnimatedWrapper>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button className="rounded-xl" variant="ghost" size="icon" onClick={scrollToTop}>
-                <ArrowUpFromDot className="size-6 text-primary/80 hover:text-primary" />
+              <Button
+                className="rounded-xl p-5"
+                variant="outline"
+                size="icon"
+                onClick={scrollToTop}
+              >
+                <ArrowUpFromDot className="size-6 shrink-0 text-primary/80 hover:text-primary" />
               </Button>
             </TooltipTrigger>
 
             <TooltipContent
               side="top"
               align="center"
-              className="mb-3 rounded-xl border bg-background font-grotesk text-sm text-primary"
+              className="rounded-xl border bg-background font-grotesk text-sm text-primary"
             >
               <p>{t('goTop')}</p>
             </TooltipContent>
