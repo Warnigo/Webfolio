@@ -6,8 +6,12 @@ const config: Config = {
   theme: {
     extend: {
       spacing: {
-        fluid: 'clamp(1rem, 2vw + 1rem, 3rem)',
+        fluid: 'clamp(1.25rem, 2.774vw - 0.829rem, 2.5rem)',
         '16.5': '60px',
+      },
+      fontFamily: {
+        mono: ['IBMPlexMono', 'monospace'],
+        grotesk: ['SpaceGrotesk', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

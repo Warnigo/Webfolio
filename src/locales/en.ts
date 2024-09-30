@@ -7,5 +7,7 @@ export default {
     home: 'Home',
     service: 'Service',
     contact: 'Contact',
+    goTop: 'Go Top',
+    itsMe: "It's me 😉",
   },
 } as const

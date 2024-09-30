@@ -3,9 +3,9 @@ import { SideLeft } from './SideLeft'
 import { SideRight } from './SideRight'
 
 const SideRail = ({ children }: PropsWithChildren) => (
-  <div className="flex h-screen w-full overflow-hidden">
+  <div className="flex h-screen w-full overflow-hidden px-fluid">
     <SideLeft />
-    <div className="size-full">{children}</div>
+    <div className="size-full overflow-y-auto">{children}</div>
     <SideRight />
   </div>
 )
