@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import fs from 'fs'
 
 const devDependenciesList = [
@@ -39,4 +40,4 @@ packageJson.devDependencies = sortedDevDependencies
 
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2), 'utf8')
 
-console.info('Packages sorted successfully.')
+console.info(chalk.green('Packages sorted successfully.'))

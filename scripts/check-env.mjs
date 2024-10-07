@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import fs from 'fs'
 import path from 'path'
 
@@ -10,7 +11,7 @@ if (!fs.existsSync(envFilePath)) {
 }
 
 if (!fs.existsSync(envExamplePath)) {
-  console.error('Error: env.example file not found')
+  console.error(chalk.red('Error: env.example file not found'))
   process.exit(1)
 }
 
@@ -34,8 +35,10 @@ const requiredVars = envExampleContent
 const missingVars = requiredVars.filter((varName) => !(varName in envVars))
 
 if (missingVars.length > 0) {
-  console.error(`Error: Missing required environment variables: ${missingVars.join(', ')}`)
+  console.error(
+    chalk.red(`Error: Missing required environment variables: ${missingVars.join(', ')}`),
+  )
   process.exit(1)
 }
 
-console.warn('All required environment variables are present')
+console.info(chalk.green('All required environment variables are present'))

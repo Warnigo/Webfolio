@@ -1,11 +1,11 @@
 {
   "name": "webfolio",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "author": {
-    "name": "Warnigo Warfurious",
+    "name": "Abubakir Shavkatov",
     "url": "https://warnigo.uz"
   },
   "repository": {

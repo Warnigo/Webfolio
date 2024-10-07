@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import chalk from 'chalk'
 import fs from 'fs'
 import path from 'path'
@@ -42,7 +41,7 @@ const checkNames = (dirPath) => {
 }
 
 if (checkNames(srcPath)) {
-  console.log(chalk.green('✅ Success: All files and folders follow the naming conventions.'))
+  console.info(chalk.green('✅ Success: All files and folders follow the naming conventions.'))
 } else {
   process.exit(1)
 }

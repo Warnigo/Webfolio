@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import { readFile } from 'fs/promises'
 
 async function checkPackageVersions() {
@@ -9,10 +10,10 @@ async function checkPackageVersions() {
     const hasCaretVersion = (deps) => Object.values(deps).some((version) => version.startsWith('^'))
 
     if (hasCaretVersion(dependencies) || hasCaretVersion(devDependencies)) {
-      console.error('Error: Caret (^) character found in package version.')
+      console.error(chalk.red('Error: Caret (^) character found in package version.'))
       process.exit(1)
     } else {
-      console.info('No caret (^) characters found in package versions.')
+      console.info(chalk.green('No caret (^) characters found in package versions.'))
     }
   } catch (error) {
     console.error('Error reading or parsing package.json:', error.message)
