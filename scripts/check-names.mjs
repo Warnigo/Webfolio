@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import chalk from 'chalk'
 import fs from 'fs'
 import path from 'path'
@@ -26,7 +27,7 @@ const checkNames = (dirPath) => {
           allValid = false
         }
       }
-      allValid = checkNames(fullPath) && allValid // To'g'ri bo'lishi kerak
+      allValid = checkNames(fullPath) && allValid
     } else if (stats.isFile() && path.extname(item) === '.tsx') {
       const fileName = path.basename(item, '.tsx')
 
