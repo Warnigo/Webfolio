@@ -35,7 +35,8 @@
     "json:server": "pnpm dlx json-server --watch db.json --port 5001",
     "sort:packages": "node scripts/sort-packages.mjs",
     "check:packages": "node scripts/check-package-versions.mjs",
-    "check:env": "node scripts/check-env.mjs"
+    "check:env": "node scripts/check-env.mjs",
+    "check:names": "node scripts/check-names.mjs"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
@@ -59,6 +60,7 @@
     "@tanstack/react-query": "5.52.1",
     "@tanstack/react-query-devtools": "5.52.1",
     "@uidotdev/usehooks": "2.4.1",
+    "chalk": "5.3.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "framer-motion": "11.3.30",
