@@ -1,4 +1,4 @@
-export { Avatar, AvatarFallback, AvatarImage } from './avatar'
-export { Button, type ButtonProps, buttonVariants } from './button'
-export { Input, type InputProps } from './input'
-export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tooltip'
+export { Avatar, AvatarFallback, AvatarImage } from './Avatar'
+export { Button, type ButtonProps, buttonVariants } from './Button'
+export { Input, type InputProps } from './Input'
+export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
